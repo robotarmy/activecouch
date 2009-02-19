@@ -20,7 +20,7 @@ Requirements
  - rubygems 0.9.4 (http://rubygems.org)
  - JSON gem (http://json.rubyforge.org) [Used for JSON encoding/decoding]
  - RSpec gem (http://rspec.rubyforge.org) [Used to run specs]
- - CouchDB 0.8.0 and upwards (http://incubator.apache.org/couchdb/community/code.html) [Some specs require running CouchDB at localhost:5984]
+ - CouchDB 0.8.0 and upwards ( http://incubator.apache.org/couchdb/community/code.html ) [Some specs require running CouchDB at localhost:5984]
  
 Important Notice
 ----------------
