@@ -25,6 +25,7 @@ describe "ActiveCouch::Base #count method with just simple attributes" do
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByName)    
   end
 
   it "should respond to the count method" do
@@ -66,6 +67,7 @@ describe "ActiveCouch::Base #count method with multiple documents in the CouchDB
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByLastName)    
   end
   
   it "should count all objects in the database when count method is sent with valid search parameters" do

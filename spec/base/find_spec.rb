@@ -37,6 +37,7 @@ describe "ActiveCouch::Base #find method with an object which has associations" 
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'blogs')
     Object.send(:remove_const, :Blog)
     Object.send(:remove_const, :Comment)
+    Object.send(:remove_const, :ByTitle)
   end
   
   it "should be able to retrieve the simple attributes" do
@@ -80,6 +81,7 @@ describe "ActiveCouch::Base #find method with no params passed" do
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByName)
   end
   
   it "should return all documents if passed :all, with no params specified"
@@ -110,6 +112,7 @@ describe "ActiveCouch::Base #find method with an ID passed" do
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByName)
   end
   
   it "should return an ActiveCouch::Base object if the ID exists" do
@@ -147,6 +150,7 @@ describe "ActiveCouch::Base #find method with non-String params passed as argume
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByAge)
   end
 
   it "should return an ActiveCouch::Base object" do
@@ -181,6 +185,7 @@ describe "ActiveCouch::Base #find method with just simple attributes" do
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByName)
   end
 
   it "should respond to the find method" do
@@ -250,6 +255,7 @@ describe "ActiveCouch::Base #find method with multiple documents in the CouchDB 
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByLastName)    
   end
   
   it "should find all objects in the database when find method is sent the param :all" do
@@ -299,6 +305,7 @@ describe "ActiveCouch::Base #find method :limit option used" do
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByLastName)
   end
   
   it "should return only one object in the database when find method is sent the param :limit => 1" do
@@ -346,6 +353,7 @@ describe "ActiveCouch::Base #find method :limit and :offset options used" do
     # Delete the database last
     ActiveCouch::Exporter.delete_database('http://localhost:5984', 'people')
     Object.send(:remove_const, :Person)
+    Object.send(:remove_const, :ByLastName)    
   end
   
   it "should return two objects in the database when find method is sent the param :offset => 1" do

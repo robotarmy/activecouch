@@ -9,6 +9,10 @@ describe "ActiveCouch::View #to_json method" do
     end
   end
   
+  after(:each) do
+    Object.send(:remove_const, :ByName)
+  end
+  
   it "should generate the correct javascript to be used in the view" do
     (ByName.to_json =~ /emit\(doc\.name, doc\);/).should_not == nil
   end
@@ -24,6 +28,10 @@ describe "ActiveCouch::View #to_json method while calling the with_key and with_
     end
   end
   
+  after(:each) do
+    Object.send(:remove_const, :ByLatitude)
+  end
+
   it "should generate the correct javascript to be used in the view" do
     (ByLatitude.to_json =~ /emit\(doc\.latitude, doc\);/).should_not == nil
     (ByLatitude.to_json =~ /if\(doc\.name == \\"Hilton\\"\)/).should_not == nil
@@ -38,6 +46,10 @@ describe "A subclass of ActiveCouch::View while calling with_key and include_att
         include_attributes :name, :rating, :latitude, :longitude, :address
       end
     end
+  end
+
+  after(:each) do
+    Object.send(:remove_const, :ByLongitude)
   end
 
   it "should generate the correct javascript which will be used in the permanent view" do
