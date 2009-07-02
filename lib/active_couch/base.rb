@@ -80,7 +80,7 @@ module ActiveCouch
     #   aged_person = AgedPerson.new
     #   aged_person.id = 'abc-def'
     #   aged_person.to_json # {"age":3.5, "_id":"abc-def"}
-    def to_json
+    def to_json(opts = {})
       hash = {}
       # First merge the attributes...
       hash.merge!(attributes.reject{ |k,v| v.nil? })
