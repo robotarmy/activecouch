@@ -1,3 +1,21 @@
+
+
+Release Notes
+-------------
+
+ bundler support has been baked into the 1.0.1 release of this gem
+
+ using the create_db task expects ./config/activecouch.yaml to specify an admin user if authentication is on
+
+
+Todo
+----
+ remove admin create_database requirenment from activecouch.yaml and push admin= password= into rake task
+ for production security
+
+---
+
+
 ActiveCouch wants to be a simple, convenient, idiomatic Object Relational Mapper for the hot new kid on the block - CouchDB. CouchDB (simplistically speaking) is a document store, which essentially means that objects can be stored in a schema-less environment.
 
 What it is?
@@ -13,6 +31,7 @@ Contributors
 
 - Cheah Chu Yeow (http://www.github.com/chuyeow)
 - Carlos Villela (http://www.github.com/cv)
+- Curtis Schofield (http://www.github.com/robotarmy)
 
 Requirements
 ------------
@@ -26,3 +45,14 @@ Important Notice
 ----------------
 
 ActiveCouch v0.2.0 does not support pre-0.8.0 versions of CouchDB
+
+
+ChangeLog
+---
+
+1.0.1
+# Bundler support 
+# Railtie added
+# use_ssl = true changed to use_ssl?
+# 1.9.2 support - : depricated in case when statement
+   when 1: => when 1 then
