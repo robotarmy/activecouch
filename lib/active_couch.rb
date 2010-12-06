@@ -4,6 +4,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'rubygems'
 require 'json'
 
+require 'active_couch/railtie' if defined?(Rails)
 require 'active_couch/support'
 require 'active_couch/errors'
 require 'active_couch/base'
