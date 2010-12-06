@@ -3,7 +3,7 @@ module ActiveCouch
     config.generators.orm :activecouch, :migration => false
 
     rake_tasks do
-      load File.join(File.dirname(__FILE__),'..','/tasks/activecouch.rake'
+      load File.join(File.dirname(__FILE__),'..','/tasks/activecouch.rake')
     end
   end
 end
