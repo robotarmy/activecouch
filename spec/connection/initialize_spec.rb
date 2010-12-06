@@ -18,6 +18,17 @@ describe "An ActiveCouch::Connection object instantiated with no site specified"
   end
 end
 
+describe "An ActiveCouch::Connection object instantiated with site and login credentials specified" do
+  it "should use the default CouchDB port of 5984" do
+    @connection = ActiveCouch::Connection.new('http://couch:couchdb@192.168.0.150')
+
+    @connection.site.host.should == "192.168.0.150"
+    @connection.site.port.should == 5984
+    @connection.site.user.should == 'couch'
+    @connection.site.password.should == 'couchdb'
+
+  end
+end
 describe "An ActiveCouch::Connection object instantiated with site (with no port) specified" do
   it "should use the default CouchDB port of 5984" do
     @connection = ActiveCouch::Connection.new('http://192.168.0.150')

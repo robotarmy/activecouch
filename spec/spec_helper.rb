@@ -1,9 +1,4 @@
-begin
-  require 'spec'
-rescue LoadError
-  require 'rubygems'
-  gem 'rspec'
-  require 'spec'
-end
+require 'rubygems'
+require 'rspec'
 
 require File.dirname(__FILE__) + "/../lib/active_couch"
