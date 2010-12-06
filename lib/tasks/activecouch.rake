@@ -1,5 +1,5 @@
 if defined? RAILS_ENV
-  require File.join(File.dirname(__FILE__), '..', '..', '..', '..', 'config', 'environment')
+  require File.join(File.dirname(__FILE__),'..' ,'..', '..', '..', '..', 'config', 'environment')
 end
 
 namespace :activecouch do
