@@ -3,7 +3,7 @@ module ActiveCouch
     config.generators.orm :activecouch, :migration => false
 
     rake_tasks do
-      load 'active_couch/tasks/activecouch.rake'
+      load 'lib/active_couch/tasks/activecouch.rake'
     end
   end
 end
